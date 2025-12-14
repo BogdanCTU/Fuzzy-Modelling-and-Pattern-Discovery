@@ -14,7 +14,7 @@ The project compares standard methods against **Fuzzy Logic counterparts** (Fuzz
 
 ## Key Features & Findings
 
-###1. Dimensionality Reduction: The "Manifold" Discovery* **Objective:** Compare Standard PCA vs. Fuzzy PCA in handling extreme outliers (e.g., super-heavyweight lifters).
+### 1. Dimensionality Reduction: The "Manifold" Discovery* **Objective:** Compare Standard PCA vs. Fuzzy PCA in handling extreme outliers (e.g., super-heavyweight lifters).
 * **Finding:**     * **Fuzzy PCA** consistently outperformed Standard PCA, explaining significantly higher variance (Female: **89.42%**, Male: **91.87%**) by down-weighting noise and outliers.
 * Standard PCA was skewed by "freak" performances, whereas Fuzzy PCA captured the true core trend.
 
@@ -56,7 +56,7 @@ The study utilizes the **Open Powerlifting** dataset (~1,000,000 records), sampl
 
 ---
 
- ![Tux, the Linux mascot](/Images/2_)
+![Female Subset PCA vs Fuzzy PCA](/Images/1_Female_PCA_vs_FuzzyPCA.png)
 
 ### 1. Variance AnalysisFuzzy PCA explains ~10% more variance than standard PCA by filtering out biological noise.
 ### 2. Clustering CompositionThe contrast between Density-Based (DBSCAN) and Connectivity-Based clustering highlights the continuous nature of the data.
