@@ -14,18 +14,23 @@ The project compares standard methods against **Fuzzy Logic counterparts** (Fuzz
 
 ## Key Features & Findings
 
-### 1. Dimensionality Reduction: The "Manifold" Discovery* **Objective:** Compare Standard PCA vs. Fuzzy PCA in handling extreme outliers (e.g., super-heavyweight lifters).
-* **Finding:**     * **Fuzzy PCA** consistently outperformed Standard PCA, explaining significantly higher variance (Female: **89.42%**, Male: **91.87%**) by down-weighting noise and outliers.
-* Standard PCA was skewed by "freak" performances, whereas Fuzzy PCA captured the true core trend.
-
-### 2. Clustering: Density vs. Connectivity* **Objective:** Determine if athletes fall into natural "types" or exist on a continuum.
+### 1. Dimensionality Reduction:
+The "Manifold" Discovery* **Objective:** Compare Standard PCA vs. Fuzzy PCA in handling extreme outliers (e.g., super-heavyweight lifters).
 * **Finding:**
-* **Male Subset (High Density):** Supported **DBSCAN** (Silhouette=0.5371), identifying a massive, cohesive "normal" core separated from noise.
-* **Female Subset (Lower Density):** DBSCAN failed (< 2 clusters). Structure had to be forced via **Agglomerative Clustering**, proving that natural distinct clusters do not exist in the data.
+  * **Fuzzy PCA** consistently outperformed Standard PCA, explaining significantly higher variance (Female: **89.42%**, Male: **91.87%**) by down-weighting noise and outliers.
+  * Standard PCA was skewed by "freak" performances, whereas Fuzzy PCA captured the true core trend.
 
-### 3. Prediction: The "Green Zone"* **Objective:** Move beyond predicting a single "mean" value to defining a valid performance range.
-* **Finding:**     * **Soft Margin Fuzzy Regression** created a robust "Corridor of Expected Performance" (Green Zone).
-* This band allows for quantitative talent identification: athletes above the band are "Elite," while those inside represent standard variance.
+### 2. Clustering:
+Density vs. Connectivity* **Objective:** Determine if athletes fall into natural "types" or exist on a continuum.
+* **Finding:**
+  * **Male Subset (High Density):** Supported **DBSCAN** (Silhouette=0.5371), identifying a massive, cohesive "normal" core separated from noise.
+  * **Female Subset (Lower Density):** DBSCAN failed (< 2 clusters). Structure had to be forced via **Agglomerative Clustering**, proving that natural distinct clusters do not exist in the data.
+
+### 3. Prediction:
+The "Green Zone"* **Objective:** Move beyond predicting a single "mean" value to defining a valid performance range.
+* **Finding:**
+  * **Soft Margin Fuzzy Regression** created a robust "Corridor of Expected Performance" (Green Zone).
+  * This band allows for quantitative talent identification: athletes above the band are "Elite," while those inside represent standard variance.
 
 ---
 
@@ -58,9 +63,12 @@ The study utilizes the **Open Powerlifting** dataset (~1,000,000 records), sampl
 
 ![Female Subset PCA vs Fuzzy PCA](/Images/1_Female_PCA_vs_FuzzyPCA.png)
 
-### 1. Variance AnalysisFuzzy PCA explains ~10% more variance than standard PCA by filtering out biological noise.
-### 2. Clustering CompositionThe contrast between Density-Based (DBSCAN) and Connectivity-Based clustering highlights the continuous nature of the data.
-### 3. Fuzzy Regression PredictionThe "Green Band" (Soft Fuzzy) provides a usable scouting range, unlike the "Red Dotted" (Hard Fuzzy) which is broken by outliers.
+### 1. Variance Analysis
+Fuzzy PCA explains ~10% more variance than standard PCA by filtering out biological noise.
+### 2. Clustering Composition
+The contrast between Density-Based (DBSCAN) and Connectivity-Based clustering highlights the continuous nature of the data.
+### 3. Fuzzy Regression Prediction
+The "Green Band" (Soft Fuzzy) provides a usable scouting range, unlike the "Red Dotted" (Hard Fuzzy) which is broken by outliers.
 
 ---
 
